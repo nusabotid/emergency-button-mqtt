@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Adam Damara",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 63.8,
+      "left": -124.8,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btn1:1.r", "esp:32", "green", [ "v0", "h38.6", "v9.6" ] ],
+    [ "btn1:2.r", "esp:GND.1", "black", [ "h29", "v29" ] ]
+  ],
+  "dependencies": {}
+}
